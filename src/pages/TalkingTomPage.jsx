@@ -11,7 +11,7 @@ export default function TalkingTomPage({ onBack, onHome }) {
   const videoRef = useRef(null)
 
   const videoSequence = [
-    { name: "../../vid.mp4", label: "Tom's Message 1" },
+    { name: "vid.mp4", label: "Tom's Message 1" },
     { name: "tom_new2.mp4", label: "Tom's Message 2" },
     { name: "tom_new3.mp4", label: "Tom's Message 3" }
   ]
