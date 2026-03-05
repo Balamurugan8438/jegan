@@ -1,0 +1,603 @@
+.language-page {
+  width: 100%;
+  height: 100%;
+  height: 100dvh;
+  padding: 8px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@supports (height: 100dvh) {
+  .language-page {
+    height: 100dvh;
+  }
+}
+
+@media (min-width: 481px) {
+  .language-page {
+    padding: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  .language-page {
+    padding: 20px;
+  }
+}
+
+/* .language-page.tamil-page {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FFE66D 50%, #FFA07A 100%);
+} */
+
+.language-page.malayalam-page {
+  background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 50%, #2A5F5F 100%);
+}
+
+.language-page.telugu-page {
+  background: linear-gradient(135deg, #95E1D3 0%, #F38181 50%, #FF6B6B 100%);
+}
+
+.language-page.english-page {
+  background: linear-gradient(135deg, #FFB6E1 0%, #FFE0EC 50%, #FFDFE7 100%);
+}
+
+.back-button {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.3px;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 40px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 481px) {
+  .back-button {
+    top: 15px;
+    left: 15px;
+    padding: 10px 16px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+}
+
+@media (min-width: 769px) {
+  .back-button {
+    top: 20px;
+    left: 20px;
+    padding: 11px 22px;
+    font-size: 15px;
+  }
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+}
+
+.page-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  padding-top: 60px;
+  animation: fadeInDown 0.8s ease;
+}
+
+.page-header h1 {
+  font-size: 26px;
+  margin-bottom: 6px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 481px) {
+  .page-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+}
+
+@media (min-width: 769px) {
+  .page-header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+}
+
+.page-header .subtitle {
+  font-size: 15px;
+  opacity: 0.95;
+  font-weight: 500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 481px) {
+  .page-header .subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 769px) {
+  .page-header .subtitle {
+    font-size: 22px;
+  }
+}
+
+.content-box {
+  /* background-image: src("../../music/Old Latter.jpg");  padding: 40px; */
+  border-radius: 16px;
+  max-width: 100%;
+  width: 100%;
+  padding: 18px;
+  margin: 60px auto;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 0.8s ease 0.2s both;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: 481px) {
+  .content-box {
+    padding: 24px;
+    margin: 0 auto 100px;
+    border-radius: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .content-box {
+    padding: 40px;
+    margin: 40px auto;
+    border-radius: 25px;
+    max-width: 850px;
+  }
+}
+
+.tamil-section,
+.language-section {
+  margin-bottom: 30px;
+}
+
+.tamil-section h2,
+.language-section h2 {
+  color: #333;
+  font-size: 22px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 481px) {
+  .tamil-section h2,
+  .language-section h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 769px) {
+  .tamil-section h2,
+  .language-section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+}
+
+.section-description {
+  text-align: center;
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+.tamil-text,
+.language-text {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.8;
+  margin: 15px 0;
+  padding: 15px;
+  background: rgba(102, 126, 234, 0.1);
+  border-left: 4px solid #667eea;
+  border-radius: 5px;
+}
+
+.text-input-area {
+  margin: 35px 0;
+}
+
+.text-input-area h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text-input {
+  width: 100%;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  resize: vertical;
+  min-height: 140px;
+  max-height: 250px;
+  transition: all 0.3s ease;
+  background: rgba(250, 250, 250, 0.8);
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 15px rgba(102, 126, 234, 0.4);
+  background: white;
+}
+
+.char-count {
+  color: #999;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.next-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 12px 35px rgba(102, 126, 234, 0.5);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  min-height: 44px;
+}
+
+@media (min-width: 481px) {
+  .next-button {
+    padding: 13px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    min-height: 48px;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .next-button {
+    padding: 16px 45px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 25px;
+  }
+}
+
+.next-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(102, 126, 234, 0.7);
+}
+
+.next-button:active {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+}
+
+.decorative-elements {
+  position: fixed;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  font-size: 32px;
+  animation: bounce-slow 3s infinite;
+  pointer-events: none;
+}
+
+@media (min-width: 481px) {
+  .decorative-elements {
+    font-size: 35px;
+    gap: 25px;
+    bottom: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .decorative-elements {
+    font-size: 45px;
+    gap: 40px;
+    bottom: 30px;
+  }
+}
+
+.emoji {
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+  animation: float 3s ease-in-out infinite;
+}
+
+.emoji:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.emoji:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+@media (max-width: 768px) {
+  .language-page {
+    padding: 12px;
+    min-height: auto;
+  }
+
+  .back-button {
+    padding: 10px 16px;
+    font-size: 13px;
+    min-height: 44px;
+    top: 15px;
+    left: 15px;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .page-header {
+    padding-top: 55px;
+    margin-bottom: 30px;
+  }
+
+  .page-header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .page-header .subtitle {
+    font-size: 18px;
+  }
+
+  .content-box {
+    padding: 24px;
+    margin: 0 auto 100px;
+    border-radius: 20px;
+  }
+
+  .tamil-section h2,
+  .language-section h2 {
+    font-size: 26px;
+    margin-bottom: 12px;
+  }
+
+  .section-description {
+    font-size: 15px;
+  }
+
+  .text-input-area h3 {
+    font-size: 16px;
+  }
+
+  .text-input {
+    font-size: 14px;
+    padding: 14px;
+    min-height: 120px;
+    border-radius: 10px;
+  }
+
+  .char-count {
+    font-size: 11px;
+  }
+
+  .next-button {
+    padding: 13px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    min-height: 48px;
+    margin-top: 20px;
+  }
+
+  .decorative-elements {
+    font-size: 35px;
+    gap: 25px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .language-page {
+    padding: 8px;
+  }
+
+  .back-button {
+    top: 12px;
+    left: 12px;
+    padding: 8px 12px;
+    font-size: 11px;
+    min-height: 40px;
+  }
+
+  .page-header {
+    padding-top: 50px;
+    margin-bottom: 25px;
+  }
+
+  .page-header h1 {
+    font-size: 26px;
+    margin-bottom: 6px;
+  }
+
+  .page-header .subtitle {
+    font-size: 15px;
+  }
+
+  .content-box {
+    padding: 18px;
+    margin: 60px auto;
+    border-radius: 16px;
+  }
+
+  .tamil-section h2,
+  .language-section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .section-description {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .text-input-area {
+    margin: 25px 0;
+  }
+
+  .text-input-area h3 {
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+
+  .text-input {
+    font-size: 13px;
+    padding: 12px;
+    min-height: 120px;
+    border-radius: 9px;
+  }
+
+  .char-count {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+
+  .next-button {
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    min-height: 44px;
+    margin-top: 18px;
+  }
+
+  .decorative-elements {
+    font-size: 32px;
+    gap: 18px;
+    bottom: 15px;
+  }
+}
+
+
+/* Ensure the image looks good inside the box */
+/* Styling for the Malayalam Greeting */
+.birthday-greeting {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #2c3e50; /* A soft dark grey-blue */
+  margin-bottom: 20px;
+  font-family: sans-serif;
+}
+
+@media (min-width: 481px) {
+  .birthday-greeting {
+    font-size: 1.7rem;
+    margin-bottom: 22px;
+  }
+}
+
+@media (min-width: 769px) {
+  .birthday-greeting {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+}
+
+/* Ensure the photo is strictly centered */
+.sketch-portrait-container {
+  display: flex;
+  justify-content: center; /* Horizontally centers the image */
+  align-items: center;
+  width: 100%;
+}
+
+.madhu-sketch-portrait {
+  max-width: 60%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 481px) {
+  .madhu-sketch-portrait {
+    max-width: 40%;
+  }
+}
+
+@media (min-width: 769px) {
+  .madhu-sketch-portrait {
+    max-width: 20%;
+  }
+}
+
+/* Divider line adjustment */
+.divider-line {
+  border: 0;
+  height: 1px;
+  background: #eee;
+  margin: 25px auto; /* Centers the divider line */
+  width: 90%;
+}
+
